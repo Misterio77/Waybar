@@ -490,7 +490,6 @@ void waybar::Bar::setVisible(bool value) {
     window.get_style_context()->remove_class("hidden");
     window.set_opacity(1);
   }
-  surface_impl_->setExclusiveZone(visible);
   surface_impl_->commit();
 }
 
