@@ -486,11 +486,9 @@ void waybar::Bar::setVisible(bool value) {
   if (!visible) {
     window.get_style_context()->add_class("hidden");
     window.set_opacity(0);
-    surface_impl_->setLayer(bar_layer::BOTTOM);
   } else {
     window.get_style_context()->remove_class("hidden");
     window.set_opacity(1);
-    surface_impl_->setLayer(layer_);
   }
   surface_impl_->setExclusiveZone(visible);
   surface_impl_->commit();
